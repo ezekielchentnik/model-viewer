@@ -61,7 +61,7 @@ suite('ModelViewerElementBase with ARMixin', () => {
       });
 
       teardown(() => {
-        element.remove();
+        element.parentNode.removeChild(element);
       });
 
       test('hides the AR button if not on AR platform', () => {
@@ -84,7 +84,7 @@ suite('ModelViewerElementBase with ARMixin', () => {
       });
 
       teardown(() => {
-        element.remove();
+        element.parentNode.removeChild(element);
       });
 
       if (IS_IOS) {

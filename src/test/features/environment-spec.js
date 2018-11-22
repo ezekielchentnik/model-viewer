@@ -103,7 +103,7 @@ suite('ModelViewerElementBase with EnvironmentMixin', () => {
     scene = element[$scene];
   });
 
-  teardown(() => element.remove());
+  teardown(() => element.parentNode && element.parentNode.removeChild(element));
 
   test(
       'has default skysphere if no background-image or background-color',

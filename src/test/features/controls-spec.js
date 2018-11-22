@@ -59,7 +59,7 @@ suite('ModelViewerElementBase with ControlsMixin', () => {
       });
 
       teardown(() => {
-        element.remove();
+        element.parentNode.removeChild(element);
       });
 
       test('creates OrbitControls if enabled', () => {

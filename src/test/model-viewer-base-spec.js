@@ -57,7 +57,7 @@ suite('ModelViewerElementBase', () => {
       });
 
       teardown(() => {
-        element.remove();
+        element.parentNode.removeChild(element);
       });
 
       test('eventually dispatches a load event', async () => {
@@ -75,7 +75,7 @@ suite('ModelViewerElementBase', () => {
       });
 
       teardown(() => {
-        element.remove();
+        element.parentNode.removeChild(element);
       });
 
       test('eventually dispatches an error event', async () => {
@@ -107,7 +107,7 @@ suite('ModelViewerElementBase', () => {
       });
 
       teardown(() => {
-        elements.forEach(e => e.remove());
+        elements.forEach(e => e.parentNode.removeChild(element));
       });
 
       test.skip('only models visible in the viewport', async () => {

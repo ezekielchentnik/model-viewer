@@ -60,7 +60,7 @@ suite('ModelViewerElementBase with MagicLeapMixin', () => {
         });
 
         teardown(() => {
-          element.remove();
+          element.parentNode.removeChild(element);
         });
 
         test('does not change model presentation', () => {
@@ -85,7 +85,7 @@ suite('ModelViewerElementBase with MagicLeapMixin', () => {
         });
 
         teardown(() => {
-          element.remove();
+          element.parentNode.removeChild(element);
           delete self.mlWorld;
         });
 

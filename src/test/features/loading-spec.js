@@ -60,7 +60,7 @@ suite('ModelViewerElementBase with LoadingMixin', () => {
       });
 
       teardown(() => {
-        element.remove();
+        element.parentNode.removeChild(element);
       });
 
       test('creates a poster element that captures interactions', () => {

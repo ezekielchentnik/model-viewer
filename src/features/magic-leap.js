@@ -124,7 +124,7 @@ export const MagicLeapMixin = (ModelViewerElement) => {
         return;
       }
 
-      this[$mlModel].remove();
+      this[$mlModel].parentNode.removeChild(this[$mlModel]);
     }
   };
 }
